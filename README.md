@@ -11,7 +11,8 @@ This project is a React application that displays information about countries us
 
 ## Visit the Deployed App
 
-You can visit the deployed application at the following link: [Countries Information App](https://countries-a3t1jfpdc-johnteyes-projects.vercel.app/)
+You can visit the deployed application at the following link: [countries-app-nine-sigma.vercel.app](https://countries-app-nine-sigma.vercel.app)
+
 
 
 ## Installation
