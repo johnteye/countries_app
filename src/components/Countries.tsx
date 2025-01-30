@@ -10,6 +10,7 @@ export default function Countries() {
   const { data, error, isLoading } = useGetAllCountriesQuery();
   const navigate = useNavigate();
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+  const [searchQuery, setSearchQuery] = useState("");
 
 
 
@@ -17,12 +18,18 @@ export default function Countries() {
     setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
-  
-  const sortedData = data
-    ? [...data].sort((a, b) =>
-        sortOrder === "asc" ? a.population - b.population : b.population - a.population
-      )
-    : [];
+  const filteredData = data
+  ? data.filter((country: any) =>
+      country.name.common.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  : [];
+
+  const sortedData = filteredData
+  ? [...filteredData].sort((a, b) =>
+      sortOrder === "asc" ? a.population - b.population : b.population - a.population
+    )
+  : [];
+
 
 
   const handleCountryClick = (countryName: string) => {
@@ -35,7 +42,10 @@ export default function Countries() {
         <h1 className="text-2xl font-bold">Countries</h1>
         <input
           type="Search"
-          className="w-1/3 h-8 border-2 border-gray-900 rounded-md"
+          className="w-1/3 h-8 border-2 border-gray-200 rounded-md px-5 focus:outline-none"
+          placeholder="Search country..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <div className="flex">
           <button  onClick={handleSort} title="Sort by Population" className="border-2 rounded-lg size-10 border-gray-500 flex items-center justify-center">

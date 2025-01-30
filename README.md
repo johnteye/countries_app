@@ -14,7 +14,7 @@ This project is a React application that displays information about countries us
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/countries-app.git
+    git clone https://github.com/johnteye/countries_app.git
     cd countries-app
     ```
 
@@ -28,7 +28,7 @@ This project is a React application that displays information about countries us
     npm run dev
     ```
 
-4. Open your browser and navigate to `http://localhost:3000`.
+4. Open your browser and navigate to `http://localhost:5173`.
 
 ## Usage
 
