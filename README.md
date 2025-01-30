@@ -9,6 +9,10 @@ This project is a React application that displays information about countries us
 - Search for a specific country.
 - View detailed information about a selected country.
 
+## Visit the Deployed App
+
+You can visit the deployed application at the following link: [Countries Information App](https://countries-a3t1jfpdc-johnteyes-projects.vercel.app/)
+
 
 ## Installation
 
